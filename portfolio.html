@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>My Portfolio</title>
+<style>
+  :root {
+    --accent: #3a5f7d;
+  }
+
+  body {
+    font-family: "Segoe UI", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
+    max-width: 800px;
+    margin: auto;
+    padding: 48px 40px;
+    line-height: 1.7;
+    color: #222;
+    background: #fff;
+  }
+
+  .header {
+    margin-bottom: 48px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #eee;
+  }
+
+  h1 {
+    margin-bottom: 8px;
+  }
+
+  .subtitle {
+    color: #555;
+    margin-top: 8px;
+  }
+
+  h2 {
+    margin-top: 56px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid #ddd;
+    color: var(--accent);
+  }
+
+  h3 {
+    margin-top: 28px;
+    color: #444;
+    font-size: 1.15em;
+  }
+
+  ul {
+    padding-left: 20px;
+  }
+
+  li {
+    margin-bottom: 12px;
+    background: #fafafa;
+    padding: 14px 18px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+  }
+
+  li b {
+    font-size: 1.05em;
+  }
+
+  a {
+    color: var(--accent);
+    text-decoration: underline;
+    font-weight: 500;
+  }
+
+  a:hover {
+    text-decoration: none;
+  }
+
+  .skills-box {
+    background: #fcfcfc;
+    border: 1px solid #eef;
+    padding: 16px;
+    border-radius: 8px;
+    margin-bottom: 16px;
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <p class="subtitle">
+    修士1年（情報工学専攻）<br>
+    Computer Vision / Deep Learning / XR & Game Development
+  </p>
+</div>
+
+<h2>Certifications</h2>
+<ul>
+  <li>
+    <b>基本情報技術者試験（FE）</b> — 2024年取得
+  </li>
+</ul>
+
+<h2>International Experience</h2>
+<ul>
+  <li>
+    <b>マレーシア・政府公認国立大学への交換留学</b>（2025年10月〜2026年2月）<br>
+    現地の研究室に所属し、英語環境下で学生と共同研究や学術的・文化的な交流を実施。
+  </li>
+</ul>
+
+<h2>Skills</h2>
+<div class="skills-box">
+  <b>プログラミング言語:</b> Python, C# (Unity), JavaScript, Java, PHP (Laravel), Dart, HTML/CSS<br>
+  <b>ツール・環境:</b> Git, Unity, Blender, PyTorch, YOLO, Docker, AviUtl<br>
+  <b>経験分野:</b> 物体検出、3D点群データ処理、XRアプリケーション開発、シミュレーション
+</div>
+
+<h3>技術的なバックグラウンドとこだわり</h3>
+<ul>
+  <li>
+    <b>Python:</b> 高専時代の避難シミュレーション（最短経路・通信範囲の影響評価）から、大学時代の3D点群モデル特徴量定量化、数千枚の画像データを処理する自動化スクリプト作成まで幅広く活用。授業開発ではカプセル化や疎結合を意識した設計を実践。
+  </li>
+  <li>
+    <b>C# (Unity):</b> 3Dアクション、2D対話型ゲーム、AR猫カフェ体験アプリなどを開発。現在はハッカソンや個人開発の知見を活かし、Unity上でのシミュレーションを研究テーマとして取り組んでいます。
+  </li>
+  <li>
+    <b>ソースコード管理 (Git):</b> 高専時代の失敗（mainへの直接プッシュやマージ衝突の放置）を契機に基礎とチーム運用の重要性を習得。Unity開発特有の <code>.gitignore</code> 運用や、複数人でのコンフリクト解消手順の最適化をハッカソンを通じて実践。
+  </li>
+  <li>
+    <b>JavaScript / Java / PHP:</b> 企業での長期アルバイトにて、3言語を用いたプログラミング検定の問題作成・相互レビューを約4年間担当。PEP8等の厳格なコード規約に則り、「誰が読んでも一意に解釈できる綺麗なコード」を徹底。現在はPHP (Laravel) やDockerを用いたWeb開発研修に従事。
+  </li>
+</ul>
+
+<h2>Research</h2>
+<ul>
+  <li>
+    <b>ニューラルレンダリング（NeRF）を用いた屋根上積雪状態の定量化に関する研究</b><br>
+    ドローン空撮動画からNeRFを用いて家屋の3次元メッシュモデルを生成し、Blender上で積雪部分のみを抽出して雪厚や雪庇（せり出し幅）を自動で定量化する手法を提案。簡易モデルにおいて定量化を実現。（国内学会発表）
+    <br><a href="https://github.com/ag-4477/prevent_snow_disaster_study_B4" target="_blank">📄 GitHub Repository</a>
+  </li>
+  <li>
+    <b>複数のYOLO分類モデルを用いた農作物病害のリアルタイム識別に関する比較検証</b><br>
+    人手不足に直面する水田での作物管理自動化を目的に、約6,600枚の画像を用いてYOLO各バージョン（v5, v8, v11）の性能を比較。YOLOv8mで精度99.9%を達成し、かつYOLOv11nが約1/10の計算量で同等の高精度（99.8%）を示すことを実証。（国際学会発表・査読あり）
+  </li>
+</ul>
+
+<h2>Hackathons & Projects (作成物)</h2>
+<ul>
+  <li>
+    <b>見極めろ！無礼講ライン（2D対話型ゲーム）</b><br>
+    主体となって4人チームを編成し、3日間のゲームジャムで開発（ユニーク賞受賞）。会話組み合わせやスコアをJSONファイルで管理。要件定義、Gitマージ作業のトラブルシューティング、PC/スマートフォン実機間の解像度・UIズレ防止対応など、チーム開発における一連の品質管理プロセスを主導。
+    <br><a href="https://github.com/ag-4477/bureiko_game" target="_blank">🔗 GitHub</a> 
+  <li>
+    <b>3Dアクションゲーム基盤（ソロ開発）</b><br>
+    移動、ダッシュ、壁ジャンプ、二段ジャンプ、ステージごとの慣性変化などを実装したアクションゲームのコア基盤。AIを活用した開発の中で、機能追加に伴う可読性・拡張性の低下を経験し、事前に密なクラス設計をしてから実装を依頼するプロセスの重要性を習得。
+    <br><a href="https://s-kim.itch.io/test-action" target="_blank">🎮 Play Game (itch.io)</a> ※Pass: <code>PR_action_kim</code>
+  </li>
+  <li>
+    <b>Todo管理アプリケーション（1dayハッカソン）</b><br>
+    Flutter/Dartの基礎を用いて作成したタスク管理アプリ。画面遷移時における非同期処理でのデータ受け渡しや、DartオブジェクトからJSONへのシリアライズ処理などを実装。
+    <br><a href="https://github.com/ag-4477/todo_app" target="_blank">🔗 GitHub</a> | <a href="https://ag-4477.github.io/todo_app/" target="_blank">📱 Web Demo</a>
+  </li>
+  <li>
+    <b>XRハッカソン成果物（2回参加）</b><br>
+    UnityとVRゴーグルを用いた短期間開発。第1回では「猫カフェ体験VRコンテンツ」（リアル空間への3D猫の生成・追従・インタラクション機能）、第2回では「収益化を想定した筋トレ促進VRアプリケーション」をチームで企画・実装。
+  </li>
+</ul>
+
+<h2>Visual Works (課外活動)</h2>
+<ul>
+  <li>
+    <b>文字PV・3DCG映像制作（AviUtl / MMD）</b><br>
+    高専時代に2年間をかけて映像作品を制作。当時は手探りで英語ドキュメントの解読やエフェクト表現の技術をキャッチアップ。カメラ制御、文字イージング、構成設計を学び、他分野のデザイン記事や知人の知見を取り入れながら視覚的な「見せ方」を追求。
+  </li>
+</ul>
+
+</body>
+</html>
